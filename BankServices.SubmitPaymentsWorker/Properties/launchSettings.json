@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "BankServices.SubmitPaymentsWorker": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

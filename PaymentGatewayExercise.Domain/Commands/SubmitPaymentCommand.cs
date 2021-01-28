@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PaymentGatewayExercise.Domain.Models
+namespace PaymentGatewayExercise.Domain.Commands
 {
-    public class Payment
+    public class SubmitPaymentCommand
     {
         public int Id { get; set; }
-        public Guid BankPaymentId { get; set; }
         public int MerchantId { get; set; }
-        public DateTime? Submitted { get; set; }
-        public DateTime? Processed { get; set; }
 
         public decimal Amount { get; set; }
         public string Currency { get; set; }
@@ -18,6 +15,5 @@ namespace PaymentGatewayExercise.Domain.Models
         public string CardFullName { get; set; }
         public string CardNumber { get; set; }
         public DateTime CardExpiry { get; set; }
-        public PaymentStatus Status { get; set; }
     }
 }

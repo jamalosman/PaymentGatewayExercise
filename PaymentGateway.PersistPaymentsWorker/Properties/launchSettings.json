@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "PaymentGateway.PersistPaymentsWorker": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
