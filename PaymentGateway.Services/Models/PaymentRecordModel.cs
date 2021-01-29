@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PaymentGateway.Domain.Models
+namespace PaymentGateway.Services.Models
 {
-    public class Payment
+    public class PaymentRecordModel
     {
         public int Id { get; set; }
         public Guid? BankPaymentId { get; set; }
-        public Merchant Merchant { get; set; }
+        public int? MerchantId { get; set; }
         public DateTime? Submitted { get; set; }
         public DateTime? Processed { get; set; }
-        public PaymentStatus Status { get; set; }
+        public string Status { get; set; }
 
         public decimal Amount { get; set; }
         public string Currency { get; set; }

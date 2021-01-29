@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentGateway.Api", "PaymentGatewayExercise.Api\PaymentGateway.Api.csproj", "{52CF5A32-4A6C-45B0-932C-DB238C220309}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Domain", "PaymentGatewayExercise.Domain\PaymentGateway.Domain.csproj", "{E898C3F5-661F-4FDC-B4C2-A95FCDCBF60D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentGateway.Domain", "PaymentGatewayExercise.Domain\PaymentGateway.Domain.csproj", "{E898C3F5-661F-4FDC-B4C2-A95FCDCBF60D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8E138F3F-04C6-4CCC-9F6C-D3EBD82AFB35}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,15 +18,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankServies.PaymentServices
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentGateway", "PaymentGateway", "{D47FE1A5-D7AE-4F17-8177-27F93CC95315}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Data", "PaymentGateway.Data\PaymentGateway.Data.csproj", "{347B240B-188F-4F19-817F-7C835B7767FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentGateway.Data", "PaymentGateway.Data\PaymentGateway.Data.csproj", "{347B240B-188F-4F19-817F-7C835B7767FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Services", "PaymentGateway.Services\PaymentGateway.Services.csproj", "{659BCB53-9317-4CA2-95FD-3FEBDCE54039}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentGateway.Services", "PaymentGateway.Services\PaymentGateway.Services.csproj", "{659BCB53-9317-4CA2-95FD-3FEBDCE54039}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.PersistPaymentsWorker", "PaymentGateway.PersistPaymentsWorker\PaymentGateway.PersistPaymentsWorker.csproj", "{1EC570F3-A1CC-4965-AF76-2DCC84B61CEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentGateway.PersistPaymentsWorker", "PaymentGateway.PersistPaymentsWorker\PaymentGateway.PersistPaymentsWorker.csproj", "{1EC570F3-A1CC-4965-AF76-2DCC84B61CEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankServices.Domain", "BankServices.Domain\BankServices.Domain.csproj", "{65B2623E-7590-4340-B6E1-0AD19161B9D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankServices.Domain", "BankServices.Domain\BankServices.Domain.csproj", "{65B2623E-7590-4340-B6E1-0AD19161B9D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankServices.SubmitPaymentsWorker", "BankServices.SubmitPaymentsWorker\BankServices.SubmitPaymentsWorker.csproj", "{C9E6B65A-A25A-4B69-A538-A08D063F5268}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankServices.SubmitPaymentsWorker", "BankServices.SubmitPaymentsWorker\BankServices.SubmitPaymentsWorker.csproj", "{C9E6B65A-A25A-4B69-A538-A08D063F5268}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FC31A903-5FAC-4E38-8546-0BFA17EAB428}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Tests.UnitTests", "PaymentGateway.Tests.UnitTests\PaymentGateway.Tests.UnitTests.csproj", "{91736B3F-590A-43A3-8FA0-424C7701B354}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +70,10 @@ Global
 		{C9E6B65A-A25A-4B69-A538-A08D063F5268}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9E6B65A-A25A-4B69-A538-A08D063F5268}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9E6B65A-A25A-4B69-A538-A08D063F5268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91736B3F-590A-43A3-8FA0-424C7701B354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91736B3F-590A-43A3-8FA0-424C7701B354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91736B3F-590A-43A3-8FA0-424C7701B354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91736B3F-590A-43A3-8FA0-424C7701B354}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +87,7 @@ Global
 		{1EC570F3-A1CC-4965-AF76-2DCC84B61CEB} = {D47FE1A5-D7AE-4F17-8177-27F93CC95315}
 		{65B2623E-7590-4340-B6E1-0AD19161B9D8} = {E1A20C71-DD11-4796-9D1A-CBDC857B8A98}
 		{C9E6B65A-A25A-4B69-A538-A08D063F5268} = {E1A20C71-DD11-4796-9D1A-CBDC857B8A98}
+		{91736B3F-590A-43A3-8FA0-424C7701B354} = {FC31A903-5FAC-4E38-8546-0BFA17EAB428}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7874988E-62BC-4279-865E-DDE28CE88590}

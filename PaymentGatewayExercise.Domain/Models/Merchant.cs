@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PaymentGatewayExercise.Domain.Models
+﻿namespace PaymentGateway.Domain.Models
 {
     public class Merchant
     {
@@ -10,6 +6,5 @@ namespace PaymentGatewayExercise.Domain.Models
         public string CompanyName { get; set; }
         public string ContactName { get; set; }
         public string EmailAddress { get; set; }
-        public string Password { get; set; }
     }
 }

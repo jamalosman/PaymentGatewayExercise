@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PaymentGateway.Data\PaymentGateway.Data.csproj" />
+    <ProjectReference Include="..\PaymentGatewayExercise.Domain\PaymentGateway.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="FluentValidation" Version="9.4.0" />
+  </ItemGroup>
+
 </Project>

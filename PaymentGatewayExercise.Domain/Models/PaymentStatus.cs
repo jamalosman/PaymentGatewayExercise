@@ -1,4 +1,4 @@
-﻿namespace PaymentGatewayExercise.Domain.Models
+﻿namespace PaymentGateway.Domain.Models
 {
     public enum PaymentStatus
     {
