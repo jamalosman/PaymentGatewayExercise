@@ -12,6 +12,7 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="FluentValidation" Version="9.4.0" />
+    <PackageReference Include="Rebus" Version="6.4.1" />
   </ItemGroup>
 
 </Project>

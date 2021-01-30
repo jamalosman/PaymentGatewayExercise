@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using PaymentGateway.Data.Interfaces;
+using PaymentGateway.Domain.Commands;
 using PaymentGateway.Domain.Models;
 using PaymentGateway.Services.Exceptions;
 using PaymentGateway.Services.Interfaces;
 using PaymentGateway.Services.Models;
+using Rebus.Bus;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,12 +16,16 @@ namespace PaymentGateway.Services.Services
     public class PaymentService : IPaymentService
     {
         private readonly IPaymentsRepository _repository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly IBus _bus;
 
-        public PaymentService(IPaymentsRepository repository, IMapper mapper)
+        public PaymentService(IPaymentsRepository repository, IUnitOfWork unitOfWork, IMapper mapper, IBus bus)
         {
             _repository = repository;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _bus = bus;
         }
 
         public async Task<PaymentRecordModel> GetPaymentRecord(int id)
@@ -42,7 +48,15 @@ namespace PaymentGateway.Services.Services
 
         public async Task<int> SubmitPayment(PaymentRequestModel requestModel)
         {
-            throw new NotImplementedException();
+
+            var payment = _mapper.Map<Payment>(requestModel);
+            await _repository.AddPayment(payment);
+            await _unitOfWork.Commit();
+
+            var command = _mapper.Map<SubmitPaymentCommand>(requestModel);
+            await _bus.Publish(command);
+
+            return payment.Id;
         }
     }
 }

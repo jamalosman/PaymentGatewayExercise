@@ -10,10 +10,14 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PaymentGateway.Data;
 using PaymentGateway.Services.Validators;
+using Rebus.ServiceProvider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
+using Rebus.RabbitMq;
+using Rebus.Config;
 
 namespace PaymentGateway
 {
@@ -35,6 +39,14 @@ namespace PaymentGateway
 
             services.AddDbContext<PaymentsContext>(o => 
                 o.UseSqlServer(Configuration.GetConnectionString("PaymentsDatabase")));
+
+            // Configure and register Rebus
+            services.AddRebus(configure => configure
+                .Logging(l => l.Serilog())
+                .Transport(t => t.UseRabbitMq(
+                    Configuration.GetValue<string>("PaymentsMessageBroker:ConnectionString"),
+                    Configuration.GetValue<string>("PaymentsMessageBroker:PaymentsQueue")
+                )));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +56,8 @@ namespace PaymentGateway
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.ApplicationServices.UseRebus();
 
             app.UseHttpsRedirection();
 

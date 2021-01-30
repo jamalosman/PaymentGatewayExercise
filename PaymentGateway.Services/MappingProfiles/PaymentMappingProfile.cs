@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using PaymentGateway.Domain.Commands;
 using PaymentGateway.Domain.Models;
 using PaymentGateway.Services.Models;
 using System;
@@ -11,7 +12,9 @@ namespace PaymentGateway.Services.MappingProfiles
     {
         public PaymentMappingProfile()
         {
-            CreateMap<Payment, PaymentRecordModel>().ReverseMap();
+            CreateMap<Payment, PaymentRecordModel>();
+            CreateMap<Payment, SubmitPaymentCommand>();
+            CreateMap<PaymentRequestModel, Payment>();
         }
     }
 }
