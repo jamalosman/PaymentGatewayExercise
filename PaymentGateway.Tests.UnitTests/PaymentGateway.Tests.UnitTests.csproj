@@ -27,4 +27,8 @@
     <ProjectReference Include="..\PaymentGatewayExercise.Domain\PaymentGateway.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="RepositoryTests\" />
+  </ItemGroup>
+
 </Project>

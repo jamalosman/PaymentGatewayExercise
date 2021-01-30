@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using PaymentGateway.Data.Interfaces;
+using PaymentGateway.Domain.Models;
+using PaymentGateway.Services.Exceptions;
 using PaymentGateway.Services.Interfaces;
 using PaymentGateway.Services.Models;
 using System;
@@ -23,6 +25,8 @@ namespace PaymentGateway.Services.Services
         public async Task<PaymentRecordModel> GetPaymentRecord(int id)
         {
             var payment = await _repository.GetPayment(id);
+            if (payment == null) throw new NotFoundException(nameof(Payment), id);
+
             var paymentRecord = _mapper.Map<PaymentRecordModel>(payment);
             return paymentRecord;
         }
@@ -30,6 +34,8 @@ namespace PaymentGateway.Services.Services
         public async Task<PaymentRecordModel> GetPaymentRecord(Guid bankPaymentId)
         {
             var payment = await _repository.GetPayment(bankPaymentId);
+            if (payment == null) throw new NotFoundException(nameof(Payment), bankPaymentId);
+
             var paymentRecord = _mapper.Map<PaymentRecordModel>(payment);
             return paymentRecord;
         }
