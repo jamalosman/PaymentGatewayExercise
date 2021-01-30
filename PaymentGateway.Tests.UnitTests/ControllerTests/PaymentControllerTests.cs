@@ -9,6 +9,7 @@ using PaymentGateway.Api.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace PaymentGateway.Tests.UnitTests.ControllerTests
 {
@@ -27,10 +28,10 @@ namespace PaymentGateway.Tests.UnitTests.ControllerTests
         }
 
         [TestMethod]
-        public void SubmitPayment_ValidModel_Returns_302ToGetPaymentRecord()
+        public async Task SubmitPayment_ValidModel_Returns_302ToGetPaymentRecord()
         {
             var sut = GetController();
-            var result = sut.SubmitPayment(new PaymentRequestModel
+            var result = await sut.SubmitPayment(new PaymentRequestModel
             {
                 Amount = 100,
                 Currency = "GBP",

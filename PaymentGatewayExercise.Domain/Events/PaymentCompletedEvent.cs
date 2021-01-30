@@ -6,5 +6,6 @@ namespace PaymentGateway.Domain.Events
 {
     public class PaymentCompletedEvent
     {
+
     }
 }

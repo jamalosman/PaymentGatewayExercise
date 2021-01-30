@@ -1,11 +1,12 @@
-﻿using System;
+﻿using BankServices.Domain.Commands;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PaymenGatewayExercise.BankServices.Interfaces
+namespace BankServices.Interfaces
 {
     public interface IAquiringBankPaymentService
     {
-           
+        public void CompletePayment(SubmitPaymentCommand command);
     }
 }

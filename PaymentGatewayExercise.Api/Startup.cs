@@ -18,6 +18,17 @@ using System.Threading.Tasks;
 
 using Rebus.RabbitMq;
 using Rebus.Config;
+using Serilog;
+using PaymentGateway.Services.Extensions;
+using PaymentGateway.Data.Extensions;
+using AutoMapper;
+using PaymentGateway.Services.MappingProfiles;
+using Microsoft.AspNetCore.Diagnostics;
+using PaymentGateway.Services.Exceptions;
+using Microsoft.AspNetCore.Http;
+using System.Text.Json;
+using FluentValidation;
+using Rebus.Routing.TypeBased;
 
 namespace PaymentGateway
 {
@@ -40,18 +51,65 @@ namespace PaymentGateway
             services.AddDbContext<PaymentsContext>(o => 
                 o.UseSqlServer(Configuration.GetConnectionString("PaymentsDatabase")));
 
+
             // Configure and register Rebus
             services.AddRebus(configure => configure
                 .Logging(l => l.Serilog())
                 .Transport(t => t.UseRabbitMq(
                     Configuration.GetValue<string>("PaymentsMessageBroker:ConnectionString"),
                     Configuration.GetValue<string>("PaymentsMessageBroker:PaymentsQueue")
-                )));
+                ))
+                .Routing(r => r.TypeBased()));
+
+            services.AddLogging(cfg => cfg.AddSerilog());
+            services.AddAutoMapper(typeof(PaymentMappingProfile));
+
+            services.AddPaymentGatewayServices();
+            services.AddRepositories();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            //app.UseExceptionHandler(a => a.Run(async context =>
+            //{
+            //    var feature = context.Features.Get<IExceptionHandlerPathFeature>();
+            //    var exception = feature.Error;
+
+            //    if (exception is NotFoundException notFoundException)
+            //    {
+            //        context.Response.StatusCode = StatusCodes.Status404NotFound;
+            //        await context.Response.WriteAsync(JsonSerializer.Serialize(new
+            //        {
+            //            Success = false,
+            //            Message = exception.Message
+            //        }));
+            //    }
+            //    else if (exception is ValidationException validationException)
+            //    {
+            //        context.Response.StatusCode = StatusCodes.Status400BadRequest;
+            //        await context.Response.WriteAsync(JsonSerializer.Serialize(new
+            //        {
+            //            Success = false,
+            //            Message = "The request was invalid",
+            //            InvalidFields = validationException.Data
+            //        }));
+            //    }
+            //    else
+            //    {
+            //        app.ApplicationServices.GetService<Microsoft.Extensions.Logging.ILogger<Startup>>()
+            //        .LogError(exception, exception.Message);
+
+            //        context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+            //        await context.Response.WriteAsync(JsonSerializer.Serialize(new
+            //        {
+            //            Success = false,
+            //            Message = "There was an error, if the isuse persists, please contact support"
+            //        }));
+            //    }
+            //}));
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -69,6 +127,8 @@ namespace PaymentGateway
             {
                 endpoints.MapControllers();
             });
+
+            app.UseSerilogRequestLogging();
         }
     }
 }

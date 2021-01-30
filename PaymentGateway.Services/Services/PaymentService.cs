@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using PaymentGateway.Data.Interfaces;
 using PaymentGateway.Domain.Commands;
 using PaymentGateway.Domain.Models;
 using PaymentGateway.Services.Exceptions;
+using PaymentGateway.Services.Extensions;
 using PaymentGateway.Services.Interfaces;
 using PaymentGateway.Services.Models;
+using PaymentGateway.Services.Validators;
 using Rebus.Bus;
 using System;
 using System.Collections.Generic;
@@ -19,13 +22,20 @@ namespace PaymentGateway.Services.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly IBus _bus;
+        private readonly PaymentRequestValidator _validator;
 
-        public PaymentService(IPaymentsRepository repository, IUnitOfWork unitOfWork, IMapper mapper, IBus bus)
+        public PaymentService(
+            IPaymentsRepository repository,
+            IUnitOfWork unitOfWork,
+            IMapper mapper,
+            IBus bus,
+            PaymentRequestValidator validator)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _bus = bus;
+            _validator = validator;
         }
 
         public async Task<PaymentRecordModel> GetPaymentRecord(int id)
@@ -48,13 +58,17 @@ namespace PaymentGateway.Services.Services
 
         public async Task<int> SubmitPayment(PaymentRequestModel requestModel)
         {
+            // TODO: remove once auth is implemented
+            requestModel.MerchantId = 1;
 
+            _validator.ValidateForServices(requestModel);
             var payment = _mapper.Map<Payment>(requestModel);
+            
             await _repository.AddPayment(payment);
-            await _unitOfWork.Commit();
 
-            var command = _mapper.Map<SubmitPaymentCommand>(requestModel);
+            var command = _mapper.Map<SubmitPaymentCommand>(payment);
             await _bus.Publish(command);
+            await _unitOfWork.Commit();
 
             return payment.Id;
         }
