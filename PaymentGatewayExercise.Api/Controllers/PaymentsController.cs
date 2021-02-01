@@ -35,9 +35,11 @@ namespace PaymentGateway.Api.Controllers
         }
 
         [HttpGet("")]
-        public async Task<IActionResult> GetPaymentRecordByBankPaymentId(Guid paymentId)
+        public async Task<IActionResult> GetPaymentRecordByBankPaymentId(Guid? paymentId)
         {
-            return Ok(await _paymentService.GetPaymentRecord(paymentId));
+            if (!paymentId.HasValue)
+                return BadRequest(new { message = "payment ID not provided" });
+            return Ok(await _paymentService.GetPaymentRecord(paymentId.Value));
         }
     }
 }

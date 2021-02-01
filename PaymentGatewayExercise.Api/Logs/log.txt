@@ -1,0 +1,488 @@
+2021-02-01 08:51:39.766 +00:00 [INF] Starting web host
+2021-02-01 08:51:41.040 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 08:51:41.252 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 08:51:41.264 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 08:51:41.267 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 08:51:41.271 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 08:51:41.284 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 08:51:41.312 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 08:51:41.702 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 08:51:41.721 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 08:51:41.723 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 08:51:41.723 +00:00 [INF] Hosting environment: Development
+2021-02-01 08:51:41.724 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 08:51:43.247 +00:00 [INF] HTTP GET / responded 404 in 1.3412 ms
+2021-02-01 08:51:52.738 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 08:51:52.877 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 08:51:53.768 +00:00 [INF] Executed DbCommand (62ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 08:51:53.959 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-02-01 08:53:25.371 +00:00 [INF] Starting web host
+2021-02-01 08:53:26.507 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 08:53:26.709 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 08:53:26.718 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 08:53:26.720 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 08:53:26.722 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 08:53:26.733 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 08:53:26.774 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 08:53:27.073 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 08:53:27.077 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 08:53:27.079 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 08:53:27.080 +00:00 [INF] Hosting environment: Production
+2021-02-01 08:53:27.081 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 08:53:28.446 +00:00 [INF] HTTP GET / responded 404 in 1.4668 ms
+2021-02-01 08:53:35.657 +00:00 [INF] HTTP GET / responded 404 in 0.0407 ms
+2021-02-01 08:53:52.980 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 08:53:53.118 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 08:53:53.897 +00:00 [INF] Executed DbCommand (56ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 08:53:54.069 +00:00 [ERR] Connection id "0HM66HRBM5D6A", Request id "0HM66HRBM5D6A:00000001": An unhandled exception was thrown by the application.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-02-01 08:55:08.914 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 08:55:08.929 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 08:57:11.782 +00:00 [ERR] Connection id "0HM66HRBM5D6A", Request id "0HM66HRBM5D6A:00000002": An unhandled exception was thrown by the application.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-02-01 09:08:46.617 +00:00 [INF] Starting web host
+2021-02-01 09:08:47.812 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 09:08:47.994 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 09:08:48.003 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 09:08:48.006 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 09:08:48.008 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 09:08:48.019 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 09:08:48.065 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 09:08:48.388 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 09:08:48.393 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 09:08:48.395 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 09:08:48.396 +00:00 [INF] Hosting environment: Production
+2021-02-01 09:08:48.396 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 09:08:49.927 +00:00 [INF] HTTP GET / responded 404 in 1.3954 ms
+2021-02-01 09:09:40.387 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 09:09:40.512 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:09:41.361 +00:00 [INF] Executed DbCommand (74ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 09:09:41.542 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:09:41.634 +00:00 [DBG] Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:15:10.018 +00:00 [INF] Starting web host
+2021-02-01 09:15:11.526 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 09:15:11.747 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 09:15:11.755 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 09:15:11.758 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 09:15:11.760 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 09:15:11.769 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 09:15:11.804 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 09:15:12.143 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 09:15:12.146 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 09:15:12.147 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 09:15:12.148 +00:00 [INF] Hosting environment: Production
+2021-02-01 09:15:12.148 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 09:15:13.677 +00:00 [INF] HTTP GET / responded 404 in 2.6493 ms
+2021-02-01 09:15:34.765 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 09:15:34.890 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:15:35.686 +00:00 [INF] Executed DbCommand (55ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 09:15:35.881 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:15:35.968 +00:00 [DBG] Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:25:02.900 +00:00 [INF] Starting web host
+2021-02-01 09:25:49.229 +00:00 [INF] Starting web host
+2021-02-01 09:25:56.719 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 09:25:57.417 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 09:25:57.447 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 09:25:57.451 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 09:25:57.457 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 09:25:57.473 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 09:25:57.546 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 09:25:58.159 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 09:25:58.166 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 09:25:58.169 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 09:25:58.172 +00:00 [INF] Hosting environment: Production
+2021-02-01 09:25:58.174 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 09:25:59.965 +00:00 [INF] HTTP GET / responded 404 in 3.8895 ms
+2021-02-01 09:33:28.058 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 09:33:28.216 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:33:29.010 +00:00 [INF] Executed DbCommand (57ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 09:33:29.190 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:33:29.274 +00:00 [INF] HTTP GET /api/payments?paymentId=DE7DB63B-9AAE-48D4-B290-5EBD144D80DC responded 404 in 0.0121 ms
+2021-02-01 09:34:43.782 +00:00 [INF] Starting web host
+2021-02-01 09:34:45.070 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 09:34:45.279 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 09:34:45.287 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 09:34:45.289 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 09:34:45.291 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 09:34:45.300 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 09:34:45.341 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 09:34:45.653 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 09:34:45.656 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 09:34:45.658 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 09:34:45.659 +00:00 [INF] Hosting environment: Production
+2021-02-01 09:34:45.660 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 09:34:47.092 +00:00 [INF] HTTP GET / responded 404 in 2.7042 ms
+2021-02-01 09:35:00.237 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 09:35:00.374 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:35:01.163 +00:00 [INF] Executed DbCommand (67ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 09:35:01.420 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:35:01.565 +00:00 [INF] HTTP GET /api/payments?paymentId=DE7DB63B-9AAE-48D4-B290-5EBD144D80DC responded 404 in 0.0229 ms
+2021-02-01 09:37:41.137 +00:00 [INF] Starting web host
+2021-02-01 09:37:42.476 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 09:37:42.752 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 09:37:42.769 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 09:37:42.770 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 09:37:42.772 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 09:37:42.782 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 09:37:42.824 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 09:37:43.086 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 09:37:43.089 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 09:37:43.090 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 09:37:43.091 +00:00 [INF] Hosting environment: Production
+2021-02-01 09:37:43.092 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 09:37:44.330 +00:00 [INF] HTTP GET / responded 404 in 1.8133 ms
+2021-02-01 09:38:00.689 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 09:38:00.817 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:38:01.588 +00:00 [INF] Executed DbCommand (55ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 09:38:01.773 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:38:01.858 +00:00 [INF] HTTP GET /api/payments?paymentId=DE7DB63B-9AAE-48D4-B290-5EBD144D80DC responded 404 in 0.0202 ms
+2021-02-01 09:38:27.880 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:38:27.895 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 09:38:28.016 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:38:28.026 +00:00 [INF] HTTP GET /api/payments?paymentId=DE7DB63B-9AAE-48D4-B290-5EBD144D80DC responded 404 in 0.0138 ms
+2021-02-01 09:39:05.712 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:39:05.722 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 09:39:08.750 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:39:08.763 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__bankPaymentId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[BankPaymentId] = @__bankPaymentId_0
+2021-02-01 09:39:08.873 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id de7db63b-9aae-48d4-b290-5ebd144d80dc
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Guid bankPaymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 57
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordByBankPaymentId(Nullable`1 paymentId) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:39:08.884 +00:00 [INF] HTTP GET /api/payments?paymentId=DE7DB63B-9AAE-48D4-B290-5EBD144D80DC responded 404 in 0.0124 ms
+2021-02-01 09:39:22.305 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:39:22.608 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Payment] ([Amount], [BankPaymentId], [CardExpiry], [CardFullName], [CardNumber], [Currency], [MerchantId], [Processed], [Status], [Submitted])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [Id]
+FROM [Payment]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-02-01 09:39:22.881 +00:00 [DBG] Sending PaymentGateway.Messages.Commands.SubmitPaymentCommand -> PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics
+2021-02-01 09:39:22.896 +00:00 [DBG] Initializing new model
+2021-02-01 09:39:22.936 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Payment] SET [Status] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2021-02-01 09:39:22.999 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:39:23.013 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[Id] = @__id_0
+2021-02-01 09:39:59.697 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:39:59.707 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[Id] = @__id_0
+2021-02-01 09:39:59.818 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id 1000
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 48
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordById(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:39:59.837 +00:00 [INF] HTTP GET /api/payments/1000 responded 404 in 0.0170 ms
+2021-02-01 09:40:53.125 +00:00 [INF] Starting web host
+2021-02-01 09:40:54.655 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 09:40:54.871 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 09:40:54.880 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 09:40:54.882 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 09:40:54.883 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 09:40:54.892 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 09:40:54.931 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 09:40:55.315 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 09:40:55.319 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 09:40:55.321 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 09:40:55.323 +00:00 [INF] Hosting environment: Production
+2021-02-01 09:40:55.325 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 09:40:56.515 +00:00 [INF] HTTP GET / responded 404 in 1.0495 ms
+2021-02-01 09:40:56.987 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 09:40:57.140 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:40:57.900 +00:00 [INF] Executed DbCommand (61ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[Id] = @__id_0
+2021-02-01 09:40:58.101 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id 1000
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 48
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordById(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:41:01.914 +00:00 [DBG] Could not find Payment with id 1000
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id 1000
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 48
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordById(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:41:51.260 +00:00 [INF] Starting web host
+2021-02-01 09:41:52.813 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 09:41:53.083 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 09:41:53.095 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 09:41:53.098 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 09:41:53.102 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 09:41:53.114 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 09:41:53.151 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 09:41:53.629 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 09:41:53.632 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 09:41:53.633 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 09:41:53.634 +00:00 [INF] Hosting environment: Production
+2021-02-01 09:41:53.635 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 09:41:54.828 +00:00 [INF] HTTP GET / responded 404 in 2.9743 ms
+2021-02-01 09:42:10.595 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 09:42:22.995 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:42:23.751 +00:00 [INF] Executed DbCommand (56ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[Id] = @__id_0
+2021-02-01 09:42:23.933 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id 1000
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 48
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordById(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:42:24.018 +00:00 [DBG] Could not find Payment with id 1000
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id 1000
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 48
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordById(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)

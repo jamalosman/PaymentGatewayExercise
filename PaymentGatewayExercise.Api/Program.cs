@@ -8,6 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Serilog;
 using Serilog.Events;
+using Serilog.Formatting.Raw;
+using Serilog.Formatting.Compact;
+using System.IO;
 
 namespace PaymentGateway
 {
@@ -15,13 +18,13 @@ namespace PaymentGateway
     {
         public static int Main(string[] args)
         {
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
             Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Debug()
-                .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-                .MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning)
-                .Enrich.FromLogContext()
-                .Enrich.WithProperty("Application", "PaymentGateway.Api")
-                .WriteTo.Console()
+                .ReadFrom.Configuration(configuration)
                 .CreateLogger();
 
             try

@@ -31,6 +31,8 @@ using Rebus.Routing.TypeBased;
 using Rebus.Bus;
 using Rebus.Handlers;
 using Rebus.Routing.TransportMessages;
+using FluentValidation;
+using Newtonsoft.Json;
 
 namespace PaymentGateway
 {
@@ -71,49 +73,12 @@ namespace PaymentGateway
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
-            //app.UseExceptionHandler(a => a.Run(async context =>
-            //{
-            //    var feature = context.Features.Get<IExceptionHandlerPathFeature>();
-            //    var exception = feature.Error;
-
-            //    if (exception is NotFoundException notFoundException)
-            //    {
-            //        context.Response.StatusCode = StatusCodes.Status404NotFound;
-            //        await context.Response.WriteAsync(JsonSerializer.Serialize(new
-            //        {
-            //            Success = false,
-            //            Message = exception.Message
-            //        }));
-            //    }
-            //    else if (exception is ValidationException validationException)
-            //    {
-            //        context.Response.StatusCode = StatusCodes.Status400BadRequest;
-            //        await context.Response.WriteAsync(JsonSerializer.Serialize(new
-            //        {
-            //            Success = false,
-            //            Message = "The request was invalid",
-            //            InvalidFields = validationException.Data
-            //        }));
-            //    }
-            //    else
-            //    {
-            //        app.ApplicationServices.GetService<Microsoft.Extensions.Logging.ILogger<Startup>>()
-            //        .LogError(exception, exception.Message);
-
-            //        context.Response.StatusCode = StatusCodes.Status500InternalServerError;
-            //        await context.Response.WriteAsync(JsonSerializer.Serialize(new
-            //        {
-            //            Success = false,
-            //            Message = "There was an error, if the isuse persists, please contact support"
-            //        }));
-            //    }
-            //}));
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseExceptionHandler("/error");
 
             app.ApplicationServices.UseRebus();
 
