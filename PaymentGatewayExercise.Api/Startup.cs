@@ -35,6 +35,10 @@ using FluentValidation;
 using Newtonsoft.Json;
 using PaymentGateway.Api.HealtChecks;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using AspNetCore.Authentication.ApiKey;
+using Microsoft.AspNetCore.Authorization;
+using PaymentGateway.Services;
+using System.Security.Claims;
 
 namespace PaymentGateway
 {
@@ -72,8 +76,23 @@ namespace PaymentGateway
                 .AddCheck<BusHealthCheck>("bus_healthcheck")
                 .AddCheck<SqlHealthcheck>("sql_healthcheck");
 
+            services.AddAuthentication(ApiKeyDefaults.AuthenticationScheme)
+                .AddApiKeyInHeaderOrQueryParams<PaymentGatewayApiKeyProvider>(options =>
+                {
+                    options.Realm = "PaymentGateway.Api";
+                    options.KeyName = "X-API-KEY";
+                });
+
+            services.AddAuthorization(options =>
+            {
+                options.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+            });
+
             services.AddPaymentGatewayServices();
             services.AddRepositories();
+            services.Configure<AdminSettings>(Configuration.GetSection(nameof(AdminSettings)));
+
+            services.AddTransient<ClaimsPrincipal>(svc => svc.GetService<IHttpContextAccessor>().HttpContext.User);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,6 +111,7 @@ namespace PaymentGateway
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
