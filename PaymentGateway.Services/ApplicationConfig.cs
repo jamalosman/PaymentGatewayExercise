@@ -1,7 +1,9 @@
 ﻿namespace PaymentGateway.Services
 {
-    public class AdminSettings
+    public class ApplicationConfig
     {
         public string AdminApiKey { get; set; }
+        public string EncryptionKeyPrefix { get; set; }
+
     }
 }

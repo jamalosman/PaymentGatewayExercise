@@ -3,7 +3,6 @@
 ## Assumptions
 - The aquiring bank will also need way to identify and authenticate the merchant
 - The bank service will know where to put the money and only needs a merchant ID from the payment gateway
-- Card details are sensative and need to be encrypted.
 
 ## Design
 

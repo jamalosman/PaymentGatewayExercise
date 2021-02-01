@@ -9,5 +9,6 @@ namespace PaymentGateway.Data.Interfaces
     public interface IMerchantsRepository
     {
         Task<Merchant> GetMerchantByApiKey(string apiKey);
+        Task<Merchant> GetMerchantById(int id);
     }
 }

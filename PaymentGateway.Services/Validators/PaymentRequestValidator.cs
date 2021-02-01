@@ -28,6 +28,7 @@ namespace PaymentGateway.Services.Validators
             RuleFor(x => x.CardFullName).NotEmpty();
             RuleFor(x => x.CardExpiryMonth).InclusiveBetween(1, 12);
             RuleFor(x => x.CardExpiryYear).GreaterThanOrEqualTo(2000);
+            RuleFor(x => x.Cvv).Length(3);
         }
     }
 }

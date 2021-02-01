@@ -44,11 +44,12 @@ namespace PaymentGateway.Services.Services
             _validator = validator;
             _currentUser = currentUser;
         }
-
         public async Task<PaymentRecordModel> GetPaymentRecord(int id)
         {
             var payment = await _repository.GetPayment(id);
             if (payment == null) throw new NotFoundException(nameof(Payment), id);
+            // if the paynent belongs to another merchant, this merchant shouldn't know it exists
+            if (payment.MerchantId != GetCurrentUserId()) throw new NotFoundException(nameof(Payment), id);
 
             var paymentRecord = _mapper.Map<PaymentRecordModel>(payment);
             return paymentRecord;
@@ -57,9 +58,13 @@ namespace PaymentGateway.Services.Services
         public async Task<PaymentRecordModel> GetPaymentRecord(Guid bankPaymentId)
         {
             var payment = await _repository.GetPayment(bankPaymentId);
+            
             if (payment == null) throw new NotFoundException(nameof(Payment), bankPaymentId);
+            // if the paynent belongs to another merchant, this merchant shouldn't know it exists
+            if (payment.MerchantId != GetCurrentUserId()) throw new NotFoundException(nameof(Payment), bankPaymentId);
 
             var paymentRecord = _mapper.Map<PaymentRecordModel>(payment);
+            
             return paymentRecord;
         }
 
@@ -73,16 +78,14 @@ namespace PaymentGateway.Services.Services
             string idString = _currentUser.Claims
                 .FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
 
-            if (int.TryParse(idString, out int id))
-            {
-                requestModel.MerchantId = id;
-            }
+            requestModel.MerchantId = GetCurrentUserId() ?? 0;
             
             _validator.ValidateForServices(requestModel);
             
             var payment = _mapper.Map<Payment>(requestModel);
             payment.Submitted = DateTime.Now;
             payment.Status = PaymentStatus.NotSubmitted;
+            payment.CardNumber = $"************{payment.CardNumber.Substring(12)}";
             await _repository.AddPayment(payment);
             await _unitOfWork.Commit();
 
@@ -106,6 +109,19 @@ namespace PaymentGateway.Services.Services
 
             await _repository.UpdatePayment(payment);
             await _unitOfWork.Commit();
+        }
+
+        private int? GetCurrentUserId()
+        {
+            string idString = _currentUser.Claims
+                .FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
+
+            if (!int.TryParse(idString, out int id))
+            {
+                return null;
+            }
+
+            return id;
         }
     }
 }

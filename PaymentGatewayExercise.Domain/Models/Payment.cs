@@ -8,6 +8,7 @@ namespace PaymentGateway.Domain.Models
     {
         public int Id { get; set; }
         public Guid? BankPaymentId { get; set; }
+        public int MerchantId { get; set; }
         public Merchant Merchant { get; set; }
         public DateTime? Submitted { get; set; }
         public DateTime? Processed { get; set; }

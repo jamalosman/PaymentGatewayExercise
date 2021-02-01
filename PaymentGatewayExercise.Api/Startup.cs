@@ -90,7 +90,7 @@ namespace PaymentGateway
 
             services.AddPaymentGatewayServices();
             services.AddRepositories();
-            services.Configure<AdminSettings>(Configuration.GetSection(nameof(AdminSettings)));
+            services.Configure<ApplicationConfig>(Configuration.GetSection(nameof(ApplicationConfig)));
 
             services.AddTransient<ClaimsPrincipal>(svc => svc.GetService<IHttpContextAccessor>().HttpContext.User);
         }

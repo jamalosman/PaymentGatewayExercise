@@ -14,5 +14,6 @@ namespace PaymentGateway.Messages.Commands
         public string CardFullName { get; set; }
         public string CardNumber { get; set; }
         public DateTime CardExpiry { get; set; }
+        public string Cvv { get; set; }
     }
 }

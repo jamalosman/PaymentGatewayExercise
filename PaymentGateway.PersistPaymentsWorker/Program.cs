@@ -71,7 +71,7 @@ namespace PaymentGateway.PersistPaymentsWorker
                         uri = config.GetValue<string>("PaymentsMessageBroker:Uri");
                         defaultQueue = config.GetValue<string>("PaymentsMessageBroker:DefaultQueue");
                         dbConnectionString = config.GetConnectionString("PaymentsDatabase");
-                        adminSection = config.GetSection("AdminSettings");
+                        adminSection = config.GetSection(nameof(ApplicationConfig));
                         adminKey = adminSection.GetValue<string>("AdminApiKey");
                     }
 
@@ -85,7 +85,7 @@ namespace PaymentGateway.PersistPaymentsWorker
                     services.AddLogging(cfg => cfg.AddSerilog());
                     services.AddAutoMapper(typeof(PaymentMappingProfile));
                     services.AddValidatorsFromAssemblyContaining<PaymentRequestValidator>();
-                    services.Configure<AdminSettings>(adminSection);
+                    services.Configure<ApplicationConfig>(adminSection);
                     services.AddTransient<ClaimsPrincipal>(svc => {
                         var claims = svc.GetService<ISecurityService>().GetClaims(adminKey).Result;
 
