@@ -33,6 +33,8 @@ using Rebus.Handlers;
 using Rebus.Routing.TransportMessages;
 using FluentValidation;
 using Newtonsoft.Json;
+using PaymentGateway.Api.HealtChecks;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 namespace PaymentGateway
 {
@@ -66,6 +68,10 @@ namespace PaymentGateway
             services.AddLogging(cfg => cfg.AddSerilog());
             services.AddAutoMapper(typeof(PaymentMappingProfile));
 
+            services.AddHealthChecks()
+                .AddCheck<BusHealthCheck>("bus_healthcheck")
+                .AddCheck<SqlHealthcheck>("sql_healthcheck");
+
             services.AddPaymentGatewayServices();
             services.AddRepositories();
         }
@@ -91,7 +97,15 @@ namespace PaymentGateway
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/health", new HealthCheckOptions()
+                {
+                    ResponseWriter = async (ctx, result) =>
+                    {
+                        await ctx.Response.WriteAsync(JsonConvert.SerializeObject(result));
+                    }
+                });
             });
+
 
             app.UseSerilogRequestLogging();
         }

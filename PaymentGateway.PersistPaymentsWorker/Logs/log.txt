@@ -211,3 +211,112 @@ SELECT @@ROWCOUNT;
 2021-02-01 09:42:22.883 +00:00 [INF] Hosting environment: Development
 2021-02-01 09:42:22.888 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
 2021-02-01 09:42:22.892 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 09:52:49.320 +00:00 [INF] Starting worker host
+2021-02-01 09:52:50.220 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 09:52:50.442 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 09:52:50.462 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 09:52:50.464 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 09:52:50.466 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 09:52:50.477 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 09:52:50.500 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 09:52:50.569 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 09:52:50.582 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 09:52:50.585 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 09:52:50.595 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 09:52:50.644 +00:00 [INF] Worker started at: "2021-02-01T09:52:50.6075624+00:00"
+2021-02-01 09:52:50.647 +00:00 [INF] Worker started at: "2021-02-01T09:52:50.6075624+00:00"
+2021-02-01 09:53:20.668 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 09:53:20.670 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 09:53:20.673 +00:00 [INF] Hosting environment: Development
+2021-02-01 09:53:20.674 +00:00 [INF] Hosting environment: Development
+2021-02-01 09:53:20.677 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 09:53:20.677 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 10:28:13.940 +00:00 [INF] Starting worker host
+2021-02-01 10:28:14.994 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 10:28:15.315 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:28:15.341 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:28:15.345 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:28:15.347 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:28:15.359 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:28:15.419 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 10:28:15.495 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 10:28:15.538 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:28:15.548 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 10:28:15.562 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 10:28:15.617 +00:00 [INF] Worker started at: "2021-02-01T10:28:15.5694952+00:00"
+2021-02-01 10:28:15.621 +00:00 [INF] Worker started at: "2021-02-01T10:28:15.5694952+00:00"
+2021-02-01 10:28:45.663 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:28:45.666 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:28:45.672 +00:00 [INF] Hosting environment: Development
+2021-02-01 10:28:45.676 +00:00 [INF] Hosting environment: Development
+2021-02-01 10:28:45.680 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 10:28:45.682 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 10:33:03.997 +00:00 [INF] Starting worker host
+2021-02-01 10:40:11.395 +00:00 [INF] Starting worker host
+2021-02-01 10:40:12.363 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 10:40:12.707 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:40:12.745 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:40:12.750 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:40:12.755 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:40:12.773 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:40:12.811 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 10:40:12.931 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 10:40:12.971 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:40:12.978 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 10:40:12.987 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 10:40:13.030 +00:00 [INF] Worker started at: "2021-02-01T10:40:12.9909587+00:00"
+2021-02-01 10:40:13.033 +00:00 [INF] Worker started at: "2021-02-01T10:40:12.9909587+00:00"
+2021-02-01 10:40:43.062 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:40:43.092 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:40:43.097 +00:00 [INF] Hosting environment: Development
+2021-02-01 10:40:43.099 +00:00 [INF] Hosting environment: Development
+2021-02-01 10:40:43.103 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 10:40:43.106 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 10:44:04.395 +00:00 [INF] Starting worker host
+2021-02-01 10:44:05.302 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 10:44:05.540 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:44:05.559 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:44:05.561 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:44:05.563 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:44:05.577 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:44:05.599 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 10:44:05.669 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 10:44:05.691 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:44:05.701 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 10:44:05.711 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 10:44:05.747 +00:00 [INF] Worker started at: "2021-02-01T10:44:05.7156552+00:00"
+2021-02-01 10:44:05.749 +00:00 [INF] Worker started at: "2021-02-01T10:44:05.7156552+00:00"
+2021-02-01 10:44:48.390 +00:00 [INF] Starting worker host
+2021-02-01 10:44:49.903 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 10:44:50.359 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:44:50.383 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:44:50.390 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:44:50.393 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:44:50.409 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:44:50.444 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 10:44:50.566 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 10:44:50.596 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:44:50.638 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 10:44:50.653 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 10:44:50.701 +00:00 [INF] Worker started at: "2021-02-01T10:44:50.6594087+00:00"
+2021-02-01 10:44:50.705 +00:00 [INF] Worker started at: "2021-02-01T10:44:50.6594087+00:00"
+2021-02-01 10:47:16.428 +00:00 [INF] Starting worker host
+2021-02-01 10:47:17.340 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 10:47:17.644 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:47:17.684 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:47:17.689 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:47:17.700 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:47:17.718 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:47:17.742 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 10:47:17.847 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 10:47:17.877 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:47:17.883 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 10:47:17.894 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 10:47:17.932 +00:00 [INF] Worker started at: "2021-02-01T10:47:17.8978443+00:00"
+2021-02-01 10:47:17.935 +00:00 [INF] Worker started at: "2021-02-01T10:47:17.8978443+00:00"
+2021-02-01 10:47:47.954 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:47:47.955 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:47:47.957 +00:00 [INF] Hosting environment: Development
+2021-02-01 10:47:47.958 +00:00 [INF] Hosting environment: Development
+2021-02-01 10:47:47.960 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 10:47:47.961 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker

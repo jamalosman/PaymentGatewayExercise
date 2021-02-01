@@ -486,3 +486,832 @@ PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment wit
    at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
    at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 09:52:49.319 +00:00 [INF] Starting web host
+2021-02-01 09:52:50.587 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 09:52:50.794 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 09:52:50.802 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 09:52:50.804 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 09:52:50.806 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 09:52:50.817 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 09:52:50.889 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 09:52:51.232 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 09:52:51.236 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 09:52:51.239 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 09:52:51.240 +00:00 [INF] Hosting environment: Production
+2021-02-01 09:52:51.241 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 09:52:52.505 +00:00 [INF] HTTP GET / responded 404 in 1.4071 ms
+2021-02-01 09:52:59.017 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 09:52:59.161 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 09:52:59.924 +00:00 [INF] Executed DbCommand (63ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payment] AS [p]
+WHERE [p].[Id] = @__id_0
+2021-02-01 09:53:00.137 +00:00 [DBG] Could not find Payment with id 1000
+PaymentGateway.Services.Exceptions.NotFoundException: Could not find Payment with id 1000
+   at PaymentGateway.Services.Services.PaymentService.GetPaymentRecord(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.Services\Services\PaymentService.cs:line 48
+   at PaymentGateway.Api.Controllers.PaymentsController.GetPaymentRecordById(Int32 id) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api\Controllers\PaymentsController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-02-01 10:28:13.949 +00:00 [INF] Starting web host
+2021-02-01 10:28:15.666 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 10:28:15.909 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:28:15.946 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:28:15.949 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:28:15.951 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:28:15.963 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:28:16.004 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 10:28:16.507 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 10:28:16.509 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 10:28:16.510 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:28:16.511 +00:00 [INF] Hosting environment: Production
+2021-02-01 10:28:16.512 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 10:28:18.279 +00:00 [INF] HTTP GET / responded 404 in 1.7840 ms
+2021-02-01 10:28:19.109 +00:00 [INF] HTTP GET / responded 404 in 0.0374 ms
+2021-02-01 10:28:20.482 +00:00 [INF] HTTP GET / responded 404 in 0.0928 ms
+2021-02-01 10:28:20.968 +00:00 [INF] HTTP GET / responded 404 in 0.0855 ms
+2021-02-01 10:28:21.333 +00:00 [INF] HTTP GET / responded 404 in 0.0708 ms
+2021-02-01 10:30:05.950 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:30:05.963 +00:00 [DBG] Initializing new model
+2021-02-01 10:30:06.066 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID 4d1df685-dc4f-440d-9b23-18cc15b04c45
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 4d1df685-dc4f-440d-9b23-18cc15b04c45 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:30:06.143 +00:00 [ERR] Moving message with ID 4d1df685-dc4f-440d-9b23-18cc15b04c45 to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID 4d1df685-dc4f-440d-9b23-18cc15b04c45 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 4d1df685-dc4f-440d-9b23-18cc15b04c45 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:30:06.913 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 10:30:07.184 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:30:07.725 +00:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:30:07.824 +00:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:30:07.835 +00:00 [ERR] Health check sql_healthcheck completed after 1870.4458ms with status "Unhealthy" and 'null'
+2021-02-01 10:30:12.340 +00:00 [INF] HTTP GET /health/bus_healthcheck responded 404 in 0.0451 ms
+2021-02-01 10:30:18.651 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:30:18.658 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:30:18.670 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID c40a6cdc-ad62-4715-bd61-03dbf66e9446
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID c40a6cdc-ad62-4715-bd61-03dbf66e9446 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:30:18.701 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:30:18.711 +00:00 [ERR] Moving message with ID c40a6cdc-ad62-4715-bd61-03dbf66e9446 to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID c40a6cdc-ad62-4715-bd61-03dbf66e9446 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID c40a6cdc-ad62-4715-bd61-03dbf66e9446 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:30:18.722 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:30:18.749 +00:00 [ERR] Health check sql_healthcheck completed after 98.259ms with status "Unhealthy" and 'null'
+2021-02-01 10:30:19.111 +00:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0348 ms
+2021-02-01 10:33:03.969 +00:00 [INF] Starting web host
+2021-02-01 10:33:05.373 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 10:33:05.599 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:33:05.620 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:33:05.622 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:33:05.624 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:33:05.635 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:33:05.689 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 10:33:06.045 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 10:33:06.049 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 10:33:06.051 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:33:06.053 +00:00 [INF] Hosting environment: Production
+2021-02-01 10:33:06.055 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 10:33:07.654 +00:00 [INF] HTTP GET / responded 404 in 1.5929 ms
+2021-02-01 10:33:18.439 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:33:18.455 +00:00 [DBG] Initializing new model
+2021-02-01 10:33:18.588 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID facc45fa-bc3a-4247-8c63-a75e329ae6ba
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID facc45fa-bc3a-4247-8c63-a75e329ae6ba and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:33:18.666 +00:00 [ERR] Moving message with ID facc45fa-bc3a-4247-8c63-a75e329ae6ba to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID facc45fa-bc3a-4247-8c63-a75e329ae6ba and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID facc45fa-bc3a-4247-8c63-a75e329ae6ba and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:33:19.324 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:33:19.333 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID e41f9309-afb1-4101-8655-3e15b0a7e994
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID e41f9309-afb1-4101-8655-3e15b0a7e994 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:33:19.357 +00:00 [ERR] Moving message with ID e41f9309-afb1-4101-8655-3e15b0a7e994 to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID e41f9309-afb1-4101-8655-3e15b0a7e994 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID e41f9309-afb1-4101-8655-3e15b0a7e994 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:33:19.642 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 10:33:19.820 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:33:19.820 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:33:20.613 +00:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:33:20.613 +00:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:33:20.691 +00:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:33:20.691 +00:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:33:20.706 +00:00 [ERR] Health check sql_healthcheck completed after 1378.127ms with status "Unhealthy" and 'SQL Server Unhealthy'
+2021-02-01 10:33:20.706 +00:00 [ERR] Health check sql_healthcheck completed after 2248.1809ms with status "Unhealthy" and 'SQL Server Unhealthy'
+2021-02-01 10:33:21.037 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:33:21.046 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID 9af8c0b3-f544-4f01-b7fa-ef90131d79bf
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 9af8c0b3-f544-4f01-b7fa-ef90131d79bf and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:33:21.062 +00:00 [ERR] Moving message with ID 9af8c0b3-f544-4f01-b7fa-ef90131d79bf to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID 9af8c0b3-f544-4f01-b7fa-ef90131d79bf and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 9af8c0b3-f544-4f01-b7fa-ef90131d79bf and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:33:21.086 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:33:21.099 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:33:21.108 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:33:21.112 +00:00 [ERR] Health check sql_healthcheck completed after 71.9683ms with status "Unhealthy" and 'SQL Server Unhealthy'
+2021-02-01 10:33:25.789 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:33:25.791 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:33:25.801 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID 49744212-5bed-429b-88cd-232f5ca7cc2d
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 49744212-5bed-429b-88cd-232f5ca7cc2d and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:33:25.804 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:33:25.828 +00:00 [ERR] Moving message with ID 49744212-5bed-429b-88cd-232f5ca7cc2d to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID 49744212-5bed-429b-88cd-232f5ca7cc2d and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 49744212-5bed-429b-88cd-232f5ca7cc2d and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:33:25.832 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:33:25.854 +00:00 [ERR] Health check sql_healthcheck completed after 64.5559ms with status "Unhealthy" and 'SQL Server Unhealthy'
+2021-02-01 10:33:34.455 +00:00 [INF] HTTP GET /health/bus_healthcheck responded 404 in 0.0470 ms
+2021-02-01 10:33:36.340 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:33:36.343 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:33:36.356 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID a9103265-0e22-4b88-b774-73c6e13c60ee
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID a9103265-0e22-4b88-b774-73c6e13c60ee and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:33:36.359 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:33:36.371 +00:00 [ERR] Moving message with ID a9103265-0e22-4b88-b774-73c6e13c60ee to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID a9103265-0e22-4b88-b774-73c6e13c60ee and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID a9103265-0e22-4b88-b774-73c6e13c60ee and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:33:36.382 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:33:36.400 +00:00 [ERR] Health check sql_healthcheck completed after 60.9762ms with status "Unhealthy" and 'SQL Server Unhealthy'
+2021-02-01 10:33:39.378 +00:00 [INF] HTTP GET /health/bus_healthcheck responded 404 in 0.1330 ms
+2021-02-01 10:40:11.418 +00:00 [INF] Starting web host
+2021-02-01 10:40:12.985 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 10:40:13.234 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:40:13.245 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:40:13.248 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:40:13.251 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:40:13.265 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:40:13.325 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 10:40:13.765 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 10:40:13.767 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 10:40:13.768 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:40:13.769 +00:00 [INF] Hosting environment: Production
+2021-02-01 10:40:13.770 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 10:40:15.154 +00:00 [INF] HTTP GET / responded 404 in 1.5233 ms
+2021-02-01 10:40:26.391 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:40:26.406 +00:00 [DBG] Initializing new model
+2021-02-01 10:40:26.515 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID 1b7367d7-8cd1-428f-9bdc-a10e4480a9da
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 1b7367d7-8cd1-428f-9bdc-a10e4480a9da and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:40:26.578 +00:00 [ERR] Moving message with ID 1b7367d7-8cd1-428f-9bdc-a10e4480a9da to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID 1b7367d7-8cd1-428f-9bdc-a10e4480a9da and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 1b7367d7-8cd1-428f-9bdc-a10e4480a9da and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:40:27.132 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 10:40:27.316 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:40:27.694 +00:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:40:27.807 +00:00 [INF] Executed DbCommand (91ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:40:27.851 +00:00 [ERR] Health check sql_healthcheck completed after 1434.7284ms with status "Unhealthy" and 'SQL Server Unhealthy'
+2021-02-01 10:41:06.322 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:41:19.491 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:41:27.581 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID 9bd739f2-2b52-4e58-89f0-0f607a21af76
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 9bd739f2-2b52-4e58-89f0-0f607a21af76 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:42:18.874 +00:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:41:27.587 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:42:18.897 +00:00 [ERR] Moving message with ID 9bd739f2-2b52-4e58-89f0-0f607a21af76 to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID 9bd739f2-2b52-4e58-89f0-0f607a21af76 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 9bd739f2-2b52-4e58-89f0-0f607a21af76 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:42:18.909 +00:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:42:18.917 +00:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:42:18.931 +00:00 [ERR] Health check sql_healthcheck completed after 72608.0848ms with status "Unhealthy" and 'SQL Server Unhealthy'
+2021-02-01 10:42:33.307 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:42:59.149 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID 7fa25540-8975-470a-a576-419e3f556f3d
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 7fa25540-8975-470a-a576-419e3f556f3d and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:42:59.156 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:42:59.160 +00:00 [ERR] Moving message with ID 7fa25540-8975-470a-a576-419e3f556f3d to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID 7fa25540-8975-470a-a576-419e3f556f3d and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 7fa25540-8975-470a-a576-419e3f556f3d and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:42:59.180 +00:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:42:59.185 +00:00 [ERR] Health check sql_healthcheck completed after 25874.287ms with status "Unhealthy" and 'SQL Server Unhealthy'
+2021-02-01 10:44:04.402 +00:00 [INF] Starting web host
+2021-02-01 10:44:05.692 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 10:44:05.893 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:44:05.907 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:44:05.908 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:44:05.909 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:44:05.918 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:44:05.955 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 10:44:06.279 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 10:44:06.282 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 10:44:06.283 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:44:06.284 +00:00 [INF] Hosting environment: Production
+2021-02-01 10:44:06.285 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 10:44:07.594 +00:00 [INF] HTTP GET / responded 404 in 1.4907 ms
+2021-02-01 10:44:10.566 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:44:10.578 +00:00 [DBG] Initializing new model
+2021-02-01 10:44:10.676 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID 868da36c-8d7f-4994-8b20-499d4f976880
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 868da36c-8d7f-4994-8b20-499d4f976880 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:44:10.737 +00:00 [ERR] Moving message with ID 868da36c-8d7f-4994-8b20-499d4f976880 to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID 868da36c-8d7f-4994-8b20-499d4f976880 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 868da36c-8d7f-4994-8b20-499d4f976880 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:44:11.229 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 10:44:11.355 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:44:11.717 +00:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:44:11.780 +00:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:44:11.792 +00:00 [ERR] Health check sql_healthcheck completed after 1209.7055ms with status "Unhealthy" and 'SQL Server Unhealthy'
+2021-02-01 10:44:48.471 +00:00 [INF] Starting web host
+2021-02-01 10:44:50.775 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 10:44:51.065 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:44:51.094 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:44:51.098 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:44:51.100 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:44:51.118 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:44:51.212 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 10:44:51.938 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 10:44:51.942 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 10:44:51.944 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:44:51.946 +00:00 [INF] Hosting environment: Production
+2021-02-01 10:44:51.952 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 10:44:52.646 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:44:52.674 +00:00 [DBG] Initializing new model
+2021-02-01 10:44:52.873 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID 653242c8-2975-4135-ae1e-b90a958ce009
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 653242c8-2975-4135-ae1e-b90a958ce009 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:44:52.975 +00:00 [ERR] Moving message with ID 653242c8-2975-4135-ae1e-b90a958ce009 to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID 653242c8-2975-4135-ae1e-b90a958ce009 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 653242c8-2975-4135-ae1e-b90a958ce009 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:44:53.253 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:44:53.280 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID 2cbce0ee-4b11-4d3d-bd80-b161909d1d7f
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 2cbce0ee-4b11-4d3d-bd80-b161909d1d7f and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:44:53.322 +00:00 [ERR] Moving message with ID 2cbce0ee-4b11-4d3d-bd80-b161909d1d7f to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID 2cbce0ee-4b11-4d3d-bd80-b161909d1d7f and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID 2cbce0ee-4b11-4d3d-bd80-b161909d1d7f and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:44:53.715 +00:00 [INF] HTTP GET / responded 404 in 4.9617 ms
+2021-02-01 10:44:54.166 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 10:44:54.343 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:44:54.343 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:44:54.773 +00:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:44:54.773 +00:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:44:54.833 +00:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:44:54.833 +00:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:45:32.212 +00:00 [INF] Starting web host
+2021-02-01 10:45:35.083 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 10:45:35.519 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:45:35.536 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:45:35.539 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:45:35.542 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:45:35.563 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:45:35.661 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 10:45:36.261 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 10:45:36.276 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 10:45:36.291 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:45:36.293 +00:00 [INF] Hosting environment: Production
+2021-02-01 10:45:36.298 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 10:45:38.615 +00:00 [INF] HTTP GET / responded 404 in 3.3372 ms
+2021-02-01 10:45:41.094 +00:00 [INF] HTTP GET / responded 404 in 0.0327 ms
+2021-02-01 10:45:52.957 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:45:52.970 +00:00 [DBG] Initializing new model
+2021-02-01 10:45:53.064 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID a44588ed-aca6-4577-b96b-cc58b154437b
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID a44588ed-aca6-4577-b96b-cc58b154437b and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:45:53.124 +00:00 [ERR] Moving message with ID a44588ed-aca6-4577-b96b-cc58b154437b to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID a44588ed-aca6-4577-b96b-cc58b154437b and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID a44588ed-aca6-4577-b96b-cc58b154437b and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:45:53.616 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 10:45:53.738 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:45:54.084 +00:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-02-01 10:45:54.153 +00:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-02-01 10:46:04.802 +00:00 [ERR] Health check sql_healthcheck completed after 11805.2984ms with status "Unhealthy" and 'SQL Server Unhealthy'
+2021-02-01 10:47:16.458 +00:00 [INF] Starting web host
+2021-02-01 10:47:17.931 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 10:47:18.146 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 10:47:18.158 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 10:47:18.160 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 10:47:18.162 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 10:47:18.171 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 10:47:18.226 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 10:47:18.601 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 10:47:18.605 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 10:47:18.607 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 10:47:18.609 +00:00 [INF] Hosting environment: Production
+2021-02-01 10:47:18.610 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 10:47:19.824 +00:00 [INF] HTTP GET / responded 404 in 2.0122 ms
+2021-02-01 10:47:25.292 +00:00 [DBG] Sending HealthCheck message -> PaymentsDefaultQueue
+2021-02-01 10:47:25.305 +00:00 [DBG] Initializing new model
+2021-02-01 10:47:25.404 +00:00 [WRN] Unhandled exception 1 (FINAL) while handling message with ID f7d8b88d-4460-41f9-b9e6-561aaea8b526
+Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID f7d8b88d-4460-41f9-b9e6-561aaea8b526 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+2021-02-01 10:47:25.465 +00:00 [ERR] Moving message with ID f7d8b88d-4460-41f9-b9e6-561aaea8b526 to error queue error
+System.AggregateException: 1 unhandled exceptions (Message with ID f7d8b88d-4460-41f9-b9e6-561aaea8b526 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings))
+ ---> Rebus.Exceptions.MessageCouldNotBeDispatchedToAnyHandlersException: Message with ID f7d8b88d-4460-41f9-b9e6-561aaea8b526 and type System.String, mscorlib could not be dispatched to any handlers (and will not be retried under the default fail-fast settings)
+   at Rebus.Pipeline.Receive.DispatchIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Sagas.LoadSagaDataStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.ActivateHandlersStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleRoutingSlipsStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.DeserializeIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.DataBus.ClaimCheck.HydrateIncomingMessageStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Pipeline.Receive.HandleDeferredMessagesStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.FailFast.FailFastStep.Process(IncomingStepContext context, Func`1 next)
+   at Rebus.Retry.Simple.SimpleRetryStrategyStep.DispatchWithTrackerIdentifier(Func`1 next, String identifierToTrackMessageBy, ITransactionContext transactionContext, String messageId, String secondLevelMessageId)
+   --- End of inner exception stack trace ---
+2021-02-01 10:47:25.954 +00:00 [WRN] No type was specified for the decimal property 'Amount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-02-01 10:47:26.090 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 10:47:26.461 +00:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
