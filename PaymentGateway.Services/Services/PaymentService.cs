@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using FluentValidation;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using PaymentGateway.Data.Interfaces;
-using PaymentGateway.Domain.Commands;
 using PaymentGateway.Domain.Models;
+using PaymentGateway.Messages.Commands;
 using PaymentGateway.Services.Exceptions;
 using PaymentGateway.Services.Extensions;
 using PaymentGateway.Services.Interfaces;
@@ -58,19 +60,37 @@ namespace PaymentGateway.Services.Services
 
         public async Task<int> SubmitPayment(PaymentRequestModel requestModel)
         {
-            // TODO: remove once auth is implemented
+            // TODO: remove this line once auth is implemented
             requestModel.MerchantId = 1;
 
             _validator.ValidateForServices(requestModel);
-            var payment = _mapper.Map<Payment>(requestModel);
             
+            var payment = _mapper.Map<Payment>(requestModel);
+            payment.Submitted = DateTime.Now;
+            payment.Status = PaymentStatus.NotSubmitted;
             await _repository.AddPayment(payment);
+            await _unitOfWork.Commit();
 
             var command = _mapper.Map<SubmitPaymentCommand>(payment);
             await _bus.Publish(command);
+
+            payment.Status = PaymentStatus.Submitted;
             await _unitOfWork.Commit();
 
             return payment.Id;
+        }
+
+        public async Task UpdatePayment(int id, Guid bankPaymentId, bool success)
+        {
+            var payment = await _repository.GetPayment(id);
+            if (payment == null) throw new NotFoundException(nameof(Payment), id);
+
+            payment.BankPaymentId = bankPaymentId;
+            payment.Status = success ? PaymentStatus.Success : PaymentStatus.Failure;
+            payment.Processed = DateTime.Now;
+
+            await _repository.UpdatePayment(payment);
+            await _unitOfWork.Commit();
         }
     }
 }

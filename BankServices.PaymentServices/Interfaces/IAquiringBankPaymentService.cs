@@ -1,12 +1,13 @@
-﻿using BankServices.Domain.Commands;
+﻿using PaymentGateway.Messages.Commands;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BankServices.Interfaces
 {
     public interface IAquiringBankPaymentService
     {
-        public void CompletePayment(SubmitPaymentCommand command);
+        public Task CompletePayment(SubmitPaymentCommand command);
     }
 }

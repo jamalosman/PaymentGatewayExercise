@@ -31,12 +31,14 @@ namespace PaymentGateway.Data.Repositories
         public async Task<Payment> GetPayment(int id)
         {
             return await _context.Set<Payment>()
+                .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<Payment> GetPayment(Guid bankPaymentId)
         {
             return await _context.Set<Payment>()
+                .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.BankPaymentId == bankPaymentId);
         }
     }

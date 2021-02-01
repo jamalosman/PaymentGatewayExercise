@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BankServices.Domain.Commands
+namespace PaymentGateway.Messages.Commands
 {
     public class SubmitPaymentCommand
     {

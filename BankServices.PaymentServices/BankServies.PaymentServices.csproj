@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BankServices.Domain\BankServices.Domain.csproj" />
+    <ProjectReference Include="..\PaymentGateway.Messages\PaymentGateway.Messages.csproj" />
   </ItemGroup>
 
 </Project>

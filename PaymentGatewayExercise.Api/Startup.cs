@@ -27,8 +27,10 @@ using Microsoft.AspNetCore.Diagnostics;
 using PaymentGateway.Services.Exceptions;
 using Microsoft.AspNetCore.Http;
 using System.Text.Json;
-using FluentValidation;
 using Rebus.Routing.TypeBased;
+using Rebus.Bus;
+using Rebus.Handlers;
+using Rebus.Routing.TransportMessages;
 
 namespace PaymentGateway
 {
@@ -48,17 +50,15 @@ namespace PaymentGateway
                 .AddControllers()
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PaymentRequestValidator>());
 
-            services.AddDbContext<PaymentsContext>(o => 
+            services.AddDbContext<PaymentsContext>(o =>
                 o.UseSqlServer(Configuration.GetConnectionString("PaymentsDatabase")));
 
 
-            // Configure and register Rebus
             services.AddRebus(configure => configure
                 .Logging(l => l.Serilog())
                 .Transport(t => t.UseRabbitMq(
-                    Configuration.GetValue<string>("PaymentsMessageBroker:ConnectionString"),
-                    Configuration.GetValue<string>("PaymentsMessageBroker:PaymentsQueue")
-                ))
+                    Configuration.GetValue<string>("PaymentsMessageBroker:Uri"),
+                    Configuration.GetValue<string>("PaymentsMessageBroker:DefaultQueue")))
                 .Routing(r => r.TypeBased()));
 
             services.AddLogging(cfg => cfg.AddSerilog());

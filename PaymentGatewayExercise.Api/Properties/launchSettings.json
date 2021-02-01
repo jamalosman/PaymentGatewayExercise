@@ -14,10 +14,10 @@
       "launchBrowser": true,
       "launchUrl": "",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_ENVIRONMENT": "Production",
         "ConnectionStrings__PaymentsDatabase": "Server=.\\SQL_SERVER_2;Database=PaymentGateway;User Id=sa;Password=Password1;",
         "PaymentsMessageBroker__ConnectionString": "amqp://payment_gateway_api:G8Way2Paymnt2021@localhost:5672/payment_gateway",
-        "PaymentsMessageBroker__PaymentsQueue": "PaymentGateway_PaymentRequests"
+        "PaymentsMessageBroker__PaymentsQueue": "PaymentsDefaultQueue"
       }
     },
     "PaymentGatewayExercise": {
@@ -27,9 +27,9 @@
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ConnectionStrings__PaymentsDatabase": "Server=.\SQL_SERVER_2;Database=PaymentGateway;User Id=sa;Password=Password1;",
-        "PaymentsMessageBroker__ConnectionString": "amqp://payment_gateway_api:G8Way2Paymnt2021@localhost:5672/payment_gateway",
-        "PaymentsMessageBroker__PaymentsQueue": "PaymentGateway_PaymentRequests"
+        "ConnectionStrings__PaymentsDatabase": "Server=.\\SQL_SERVER_2;Database=PaymentGateway;User Id=sa;Password=Password1;",
+        "PaymentsMessageBroker__Uri": "amqp://payment_gateway_api:G8Way2Paymnt2021@localhost:5672/payment_gateway",
+        "PaymentsMessageBroker__DefaultQueue": "PaymentsDefaultQueue"
       }
     }
   }

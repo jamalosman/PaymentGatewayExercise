@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PaymentGateway.Data\PaymentGateway.Data.csproj" />
+    <ProjectReference Include="..\PaymentGateway.Messages\PaymentGateway.Messages.csproj" />
     <ProjectReference Include="..\PaymentGatewayExercise.Domain\PaymentGateway.Domain.csproj" />
   </ItemGroup>
 
