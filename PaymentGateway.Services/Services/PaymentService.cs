@@ -13,6 +13,8 @@ using PaymentGateway.Services.Validators;
 using Rebus.Bus;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,19 +27,22 @@ namespace PaymentGateway.Services.Services
         private readonly IMapper _mapper;
         private readonly IBus _bus;
         private readonly PaymentRequestValidator _validator;
+        private readonly ClaimsPrincipal _currentUser;
 
         public PaymentService(
             IPaymentsRepository repository,
             IUnitOfWork unitOfWork,
             IMapper mapper,
             IBus bus,
-            PaymentRequestValidator validator)
+            PaymentRequestValidator validator,
+            ClaimsPrincipal currentUser)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _bus = bus;
             _validator = validator;
+            _currentUser = currentUser;
         }
 
         public async Task<PaymentRecordModel> GetPaymentRecord(int id)
@@ -60,9 +65,19 @@ namespace PaymentGateway.Services.Services
 
         public async Task<int> SubmitPayment(PaymentRequestModel requestModel)
         {
-            // TODO: remove this line once auth is implemented
-            requestModel.MerchantId = 1;
+            if (!_currentUser.IsInRole("merchant"))
+            {
+                throw new UnauthorizedResourceAccessException("Only merchants can make payments");
+            }
 
+            string idString = _currentUser.Claims
+                .FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
+
+            if (int.TryParse(idString, out int id))
+            {
+                requestModel.MerchantId = id;
+            }
+            
             _validator.ValidateForServices(requestModel);
             
             var payment = _mapper.Map<Payment>(requestModel);

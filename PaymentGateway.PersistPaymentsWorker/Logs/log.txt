@@ -320,3 +320,319 @@ SELECT @@ROWCOUNT;
 2021-02-01 10:47:47.958 +00:00 [INF] Hosting environment: Development
 2021-02-01 10:47:47.960 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
 2021-02-01 10:47:47.961 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 15:41:49.802 +00:00 [INF] Starting worker host
+2021-02-01 15:41:51.715 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 15:41:52.323 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 15:41:52.371 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 15:41:52.386 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 15:41:52.392 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 15:41:52.430 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 15:41:52.501 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 15:41:52.719 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 15:41:52.780 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 15:41:52.799 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 15:41:52.821 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 15:41:52.902 +00:00 [INF] Worker started at: "2021-02-01T15:41:52.8304214+00:00"
+2021-02-01 15:41:52.910 +00:00 [INF] Worker started at: "2021-02-01T15:41:52.8304214+00:00"
+2021-02-01 15:42:22.923 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 15:42:22.926 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 15:42:22.930 +00:00 [INF] Hosting environment: Development
+2021-02-01 15:42:22.932 +00:00 [INF] Hosting environment: Development
+2021-02-01 15:42:22.934 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 15:42:22.938 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:08:08.322 +00:00 [INF] Starting worker host
+2021-02-01 16:08:10.844 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:08:11.539 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:08:11.614 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:08:11.622 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:08:11.629 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:08:11.657 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:08:11.709 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:08:11.890 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:08:11.929 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:08:11.945 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:08:11.976 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 16:08:12.071 +00:00 [INF] Worker started at: "2021-02-01T16:08:11.9922806+00:00"
+2021-02-01 16:08:12.077 +00:00 [INF] Worker started at: "2021-02-01T16:08:11.9922806+00:00"
+2021-02-01 16:08:42.096 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:08:42.098 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:08:42.101 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:08:42.103 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:08:42.107 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:08:42.108 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:09:35.652 +00:00 [INF] Starting worker host
+2021-02-01 16:09:37.417 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:09:37.871 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:09:37.893 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:09:37.899 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:09:37.907 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:09:37.927 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:09:37.965 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:09:38.101 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:09:38.139 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:09:38.146 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:09:38.167 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 16:09:38.237 +00:00 [INF] Worker started at: "2021-02-01T16:09:38.1793612+00:00"
+2021-02-01 16:09:38.244 +00:00 [INF] Worker started at: "2021-02-01T16:09:38.1793612+00:00"
+2021-02-01 16:10:08.259 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:10:08.262 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:10:08.265 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:10:08.266 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:10:08.268 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:10:08.269 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:11:05.302 +00:00 [INF] Starting worker host
+2021-02-01 16:11:07.540 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:11:08.017 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:11:08.036 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:11:08.041 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:11:08.044 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:11:08.063 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:11:08.092 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:11:08.219 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:11:08.248 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:11:08.277 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:11:08.293 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 16:11:08.346 +00:00 [INF] Worker started at: "2021-02-01T16:11:08.2990770+00:00"
+2021-02-01 16:11:08.351 +00:00 [INF] Worker started at: "2021-02-01T16:11:08.2990770+00:00"
+2021-02-01 16:14:42.587 +00:00 [INF] Starting worker host
+2021-02-01 16:14:43.764 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:14:44.092 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:14:44.106 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:14:44.109 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:14:44.111 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:14:44.122 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:14:44.145 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:14:44.241 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:14:44.275 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:14:44.281 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:14:44.296 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 16:14:44.341 +00:00 [INF] Worker started at: "2021-02-01T16:14:44.3010226+00:00"
+2021-02-01 16:14:44.344 +00:00 [INF] Worker started at: "2021-02-01T16:14:44.3010226+00:00"
+2021-02-01 16:15:14.357 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:15:14.359 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:15:14.362 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:15:14.363 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:15:14.367 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:15:14.369 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:17:31.206 +00:00 [INF] Starting worker host
+2021-02-01 16:17:32.440 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:17:32.945 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:17:32.960 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:17:32.964 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:17:32.969 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:17:32.982 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:17:33.019 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:17:33.111 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:17:33.139 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:17:33.145 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:17:33.163 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 16:17:33.210 +00:00 [INF] Worker started at: "2021-02-01T16:17:33.1703667+00:00"
+2021-02-01 16:17:33.213 +00:00 [INF] Worker started at: "2021-02-01T16:17:33.1703667+00:00"
+2021-02-01 16:18:04.044 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:18:04.045 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:18:04.049 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:18:04.050 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:18:04.053 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:18:04.055 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:19:09.219 +00:00 [INF] Starting worker host
+2021-02-01 16:19:10.283 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:19:10.644 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:19:10.660 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:19:10.666 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:19:10.674 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:19:10.692 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:19:10.723 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:19:10.824 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:19:10.851 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:19:10.864 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:19:10.875 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 16:19:10.930 +00:00 [INF] Worker started at: "2021-02-01T16:19:10.8793723+00:00"
+2021-02-01 16:19:10.934 +00:00 [INF] Worker started at: "2021-02-01T16:19:10.8793723+00:00"
+2021-02-01 16:22:13.714 +00:00 [INF] Starting worker host
+2021-02-01 16:22:15.526 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:22:16.159 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:22:16.187 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:22:16.191 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:22:16.195 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:22:16.217 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:22:16.268 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:22:16.456 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:22:16.493 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:22:16.517 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:22:16.537 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 16:22:16.610 +00:00 [INF] Worker started at: "2021-02-01T16:22:16.5487834+00:00"
+2021-02-01 16:22:16.619 +00:00 [INF] Worker started at: "2021-02-01T16:22:16.5487834+00:00"
+2021-02-01 16:22:50.645 +00:00 [INF] Starting worker host
+2021-02-01 16:22:51.678 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:22:52.058 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:22:52.073 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:22:52.077 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:22:52.080 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:22:52.101 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:22:52.128 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:22:52.214 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:22:52.237 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:22:52.241 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:22:52.251 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 16:22:52.286 +00:00 [INF] Worker started at: "2021-02-01T16:22:52.2555300+00:00"
+2021-02-01 16:22:52.290 +00:00 [INF] Worker started at: "2021-02-01T16:22:52.2555300+00:00"
+2021-02-01 16:23:22.311 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:23:22.318 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:23:22.322 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:23:22.323 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:23:22.325 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:23:22.326 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:38:04.150 +00:00 [INF] Starting worker host
+2021-02-01 16:38:06.088 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:38:06.564 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:38:06.594 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:38:06.600 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:38:06.604 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:38:06.623 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:38:06.678 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:38:06.726 +00:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Rebus.Handlers.IHandleMessages`1[PaymentGateway.Messages.Events.PaymentCompletedEvent] Lifetime: Transient ImplementationType: PaymentGateway.PersistPaymentsWorker.Handlers.PaymentCompletedHandler': Unable to resolve service for type 'System.Security.Claims.ClaimsPrincipal' while attempting to activate 'PaymentGateway.Services.Services.PaymentService'.) (Error while validating the service descriptor 'ServiceType: PaymentGateway.Services.Interfaces.IPaymentService Lifetime: Transient ImplementationType: PaymentGateway.Services.Services.PaymentService': Unable to resolve service for type 'System.Security.Claims.ClaimsPrincipal' while attempting to activate 'PaymentGateway.Services.Services.PaymentService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Rebus.Handlers.IHandleMessages`1[PaymentGateway.Messages.Events.PaymentCompletedEvent] Lifetime: Transient ImplementationType: PaymentGateway.PersistPaymentsWorker.Handlers.PaymentCompletedHandler': Unable to resolve service for type 'System.Security.Claims.ClaimsPrincipal' while attempting to activate 'PaymentGateway.Services.Services.PaymentService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'System.Security.Claims.ClaimsPrincipal' while attempting to activate 'PaymentGateway.Services.Services.PaymentService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at PaymentGateway.PersistPaymentsWorker.Program.Main(String[] args) in C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker\Program.cs:line 42
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: PaymentGateway.Services.Interfaces.IPaymentService Lifetime: Transient ImplementationType: PaymentGateway.Services.Services.PaymentService': Unable to resolve service for type 'System.Security.Claims.ClaimsPrincipal' while attempting to activate 'PaymentGateway.Services.Services.PaymentService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'System.Security.Claims.ClaimsPrincipal' while attempting to activate 'PaymentGateway.Services.Services.PaymentService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+2021-02-01 16:55:41.005 +00:00 [INF] Starting worker host
+2021-02-01 16:55:42.759 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:55:43.437 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:55:43.470 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:55:43.482 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:55:43.489 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:55:43.530 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:55:43.599 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:55:43.891 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentGateway.PersistPayments
+2021-02-01 16:55:43.957 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:55:44.053 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:55:44.083 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics => PaymentGateway.PersistPayments
+2021-02-01 16:55:44.355 +00:00 [INF] Worker started at: "2021-02-01T16:55:44.1508055+00:00"
+2021-02-01 16:55:44.369 +00:00 [INF] Worker started at: "2021-02-01T16:55:44.1508055+00:00"
+2021-02-01 16:55:48.938 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 16:55:48.975 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 16:55:52.316 +00:00 [INF] Executed DbCommand (98ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Merchants] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2021-02-01 16:55:52.326 +00:00 [INF] Executed DbCommand (98ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Merchants] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2021-02-01 16:55:52.817 +00:00 [INF] Executed DbCommand (78ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payments] AS [p]
+WHERE [p].[Id] = @__id_0
+2021-02-01 16:55:52.827 +00:00 [INF] Executed DbCommand (78ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payments] AS [p]
+WHERE [p].[Id] = @__id_0
+2021-02-01 16:55:52.853 +00:00 [INF] Successfully initialized consumer for PaymentGateway.PersistPayments
+2021-02-01 16:55:52.985 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payments] AS [p]
+WHERE [p].[Id] = @__p_0
+2021-02-01 16:55:53.097 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payments] AS [p]
+WHERE [p].[Id] = @__p_0
+2021-02-01 16:55:53.664 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Payments] SET [BankPaymentId] = @p0, [Processed] = @p1, [Status] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+2021-02-01 16:55:53.684 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Payments] SET [BankPaymentId] = @p0, [Processed] = @p1, [Status] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+2021-02-01 16:55:53.810 +00:00 [DBG] Dispatching PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages 423e8b1e-dda3-48fa-b2f7-a7f3da72a8c7 to 1 handlers took 1360 ms
+2021-02-01 16:56:14.384 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:56:14.388 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:56:14.402 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:56:14.405 +00:00 [INF] Hosting environment: Development
+2021-02-01 16:56:14.412 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:56:14.422 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGateway.PersistPaymentsWorker
+2021-02-01 16:56:27.158 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 16:56:27.164 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 16:56:27.187 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Merchants] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2021-02-01 16:56:27.196 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Merchants] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2021-02-01 16:56:27.218 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payments] AS [p]
+WHERE [p].[Id] = @__id_0
+2021-02-01 16:56:27.223 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payments] AS [p]
+WHERE [p].[Id] = @__id_0
+2021-02-01 16:56:27.234 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payments] AS [p]
+WHERE [p].[Id] = @__p_0
+2021-02-01 16:56:27.244 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payments] AS [p]
+WHERE [p].[Id] = @__p_0
+2021-02-01 16:56:27.254 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Payments] SET [BankPaymentId] = @p0, [Processed] = @p1, [Status] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+2021-02-01 16:56:27.258 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Payments] SET [BankPaymentId] = @p0, [Processed] = @p1, [Status] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+2021-02-01 16:56:27.273 +00:00 [DBG] Dispatching PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages 98b64d30-64d7-42f0-8337-b0f5a23145cf to 1 handlers took 60 ms

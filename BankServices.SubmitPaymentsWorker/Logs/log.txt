@@ -206,3 +206,141 @@
 2021-02-01 10:47:17.820 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
 2021-02-01 10:47:17.829 +00:00 [INF] Bus Rebus 2 started
 2021-02-01 10:47:17.841 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 15:41:49.800 +00:00 [INF] Starting worker host
+2021-02-01 15:41:51.505 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 15:41:52.095 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 15:41:52.125 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 15:41:52.136 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 15:41:52.142 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 15:41:52.176 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 15:41:52.246 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 15:41:52.422 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 15:41:52.585 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 15:41:52.634 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 15:41:52.663 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:08:08.336 +00:00 [INF] Starting worker host
+2021-02-01 16:08:10.495 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:08:11.248 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:08:11.297 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:08:11.305 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:08:11.313 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:08:11.393 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:08:11.443 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:08:11.626 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:08:11.688 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:08:11.723 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:08:11.743 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:09:35.634 +00:00 [INF] Starting worker host
+2021-02-01 16:09:37.214 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:09:37.680 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:09:37.710 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:09:37.718 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:09:37.722 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:09:37.746 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:09:37.797 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:09:37.911 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:09:37.973 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:09:37.982 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:09:38.002 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:11:05.332 +00:00 [INF] Starting worker host
+2021-02-01 16:11:07.261 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:11:07.778 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:11:07.801 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:11:07.807 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:11:07.811 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:11:07.835 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:11:07.865 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:11:07.984 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:11:08.023 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:11:08.050 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:11:08.066 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:14:42.642 +00:00 [INF] Starting worker host
+2021-02-01 16:14:43.632 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:14:43.948 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:14:43.968 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:14:43.974 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:14:43.979 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:14:43.994 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:14:44.021 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:14:44.122 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:14:44.153 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:14:44.158 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:14:44.173 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:17:31.228 +00:00 [INF] Starting worker host
+2021-02-01 16:17:32.316 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:17:32.669 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:17:32.679 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:17:32.682 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:17:32.685 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:17:32.696 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:17:32.716 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:17:32.819 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:17:32.874 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:17:32.886 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:17:32.902 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:19:09.229 +00:00 [INF] Starting worker host
+2021-02-01 16:19:10.114 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:19:10.492 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:19:10.505 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:19:10.513 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:19:10.516 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:19:10.532 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:19:10.563 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:19:10.664 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:19:10.737 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:19:10.751 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:19:10.766 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:22:13.723 +00:00 [INF] Starting worker host
+2021-02-01 16:22:15.224 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:22:15.759 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:22:15.815 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:22:15.830 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:22:15.836 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:22:15.856 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:22:15.950 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:22:16.080 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:22:16.155 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:22:16.175 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:22:16.194 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:22:50.652 +00:00 [INF] Starting worker host
+2021-02-01 16:22:51.574 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:22:51.909 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:22:51.944 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:22:51.948 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:22:51.958 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:22:51.974 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:22:51.997 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:22:52.084 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:22:52.122 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:22:52.138 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:22:52.158 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:38:04.089 +00:00 [INF] Starting worker host
+2021-02-01 16:38:05.780 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:38:06.249 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:38:06.279 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:38:06.287 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:38:06.292 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:38:06.311 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:38:06.373 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:38:06.489 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:38:06.539 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:38:06.561 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:38:06.580 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:38:40.299 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:38:41.337 +00:00 [DBG] Sending PaymentGateway.Messages.Events.PaymentCompletedEvent -> PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics
+2021-02-01 16:38:41.349 +00:00 [DBG] Dispatching PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages 6286356d-cabc-4bff-8b13-f2191f8ae998 to 1 handlers took 1107 ms
+2021-02-01 16:55:41.032 +00:00 [INF] Starting worker host
+2021-02-01 16:55:42.441 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:55:43.126 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:55:43.158 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:55:43.167 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:55:43.173 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:55:43.203 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:55:43.261 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:55:43.465 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue BankServices.SubmitPayments
+2021-02-01 16:55:43.556 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:55:43.602 +00:00 [INF] Bus Rebus 2 started
+2021-02-01 16:55:43.632 +00:00 [DBG] Registering subscriber PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics => BankServices.SubmitPayments
+2021-02-01 16:56:24.034 +00:00 [INF] Successfully initialized consumer for BankServices.SubmitPayments
+2021-02-01 16:56:25.148 +00:00 [DBG] Sending PaymentGateway.Messages.Events.PaymentCompletedEvent -> PaymentGateway.Messages.Events.PaymentCompletedEvent, PaymentGateway.Messages@RebusTopics
+2021-02-01 16:56:25.169 +00:00 [DBG] Dispatching PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages 5c10b5ff-f9ff-44ae-ad29-4978950ea79d to 1 handlers took 1154 ms

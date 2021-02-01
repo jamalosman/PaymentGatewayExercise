@@ -10,6 +10,7 @@ namespace PaymentGateway.Data.Extensions
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             services.AddTransient<IPaymentsRepository, PaymentsRepository>();
+            services.AddTransient<IMerchantsRepository, MerchantsRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             return services;

@@ -7,7 +7,9 @@ using Microsoft.Extensions.Hosting;
 using PaymentGateway.Data;
 using PaymentGateway.Data.Extensions;
 using PaymentGateway.PersistPaymentsWorker.Handlers;
+using PaymentGateway.Services;
 using PaymentGateway.Services.Extensions;
+using PaymentGateway.Services.Interfaces;
 using PaymentGateway.Services.MappingProfiles;
 using PaymentGateway.Services.Validators;
 using Rebus.Config;
@@ -19,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace PaymentGateway.PersistPaymentsWorker
@@ -59,7 +62,8 @@ namespace PaymentGateway.PersistPaymentsWorker
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
-                    string uri, defaultQueue, dbConnectionString;
+                    string uri, defaultQueue, dbConnectionString, adminKey;
+                    IConfigurationSection adminSection;
                     using (var provider = services.BuildServiceProvider())
                     {
                         var config = provider.GetRequiredService<IConfiguration>();
@@ -67,6 +71,8 @@ namespace PaymentGateway.PersistPaymentsWorker
                         uri = config.GetValue<string>("PaymentsMessageBroker:Uri");
                         defaultQueue = config.GetValue<string>("PaymentsMessageBroker:DefaultQueue");
                         dbConnectionString = config.GetConnectionString("PaymentsDatabase");
+                        adminSection = config.GetSection("AdminSettings");
+                        adminKey = adminSection.GetValue<string>("AdminApiKey");
                     }
 
 
@@ -79,6 +85,12 @@ namespace PaymentGateway.PersistPaymentsWorker
                     services.AddLogging(cfg => cfg.AddSerilog());
                     services.AddAutoMapper(typeof(PaymentMappingProfile));
                     services.AddValidatorsFromAssemblyContaining<PaymentRequestValidator>();
+                    services.Configure<AdminSettings>(adminSection);
+                    services.AddTransient<ClaimsPrincipal>(svc => {
+                        var claims = svc.GetService<ISecurityService>().GetClaims(adminKey).Result;
+
+                        return new ClaimsPrincipal(new ClaimsIdentity(claims));
+                        });
 
 
                     // Configure and register Rebus

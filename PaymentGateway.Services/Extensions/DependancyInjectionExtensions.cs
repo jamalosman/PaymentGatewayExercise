@@ -12,7 +12,9 @@ namespace PaymentGateway.Services.Extensions
 
         public static IServiceCollection AddPaymentGatewayServices(this IServiceCollection services)
         {
-            return services.AddTransient<IPaymentService, PaymentService>();
+            return services
+                .AddTransient<IPaymentService, PaymentService>()
+                .AddTransient<ISecurityService, SecurityService>();
         }
 
     }

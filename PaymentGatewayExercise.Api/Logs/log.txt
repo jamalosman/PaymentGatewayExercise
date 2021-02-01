@@ -1762,3 +1762,63 @@ WHERE [m].[ApiKey] = @__apiKey_0
 SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
 FROM [Payments] AS [p]
 WHERE [p].[Id] = @__id_0
+2021-02-01 16:55:41.039 +00:00 [INF] Starting web host
+2021-02-01 16:55:44.612 +00:00 [INF] Initializing RabbitMQ connection manager for transport with input queue PaymentsDefaultQueue
+2021-02-01 16:55:45.234 +00:00 [INF] Starting periodic task CleanupTrackedErrors with interval "00:00:10"
+2021-02-01 16:55:45.262 +00:00 [INF] Bus Rebus 1 started
+2021-02-01 16:55:45.268 +00:00 [INF] Bus Rebus 1 setting number of workers to 1
+2021-02-01 16:55:45.275 +00:00 [DBG] Adding worker Rebus 1 worker 1
+2021-02-01 16:55:45.316 +00:00 [DBG] Starting (threadpool-based) worker Rebus 1 worker 1
+2021-02-01 16:55:45.445 +00:00 [INF] Successfully initialized consumer for PaymentsDefaultQueue
+2021-02-01 16:55:46.651 +00:00 [INF] Now listening on: https://localhost:5001
+2021-02-01 16:55:46.996 +00:00 [INF] Now listening on: http://localhost:5000
+2021-02-01 16:55:47.028 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-01 16:55:47.037 +00:00 [INF] Hosting environment: Production
+2021-02-01 16:55:47.040 +00:00 [INF] Content root path: C:\Users\Jamal Osman\Source\Repos\PaymentGatewayExercise\PaymentGatewayExercise.Api
+2021-02-01 16:55:50.710 +00:00 [INF] No Api Key found in the request.
+2021-02-01 16:55:50.762 +00:00 [DBG] AuthenticationScheme: ApiKey was not authenticated.
+2021-02-01 16:55:50.816 +00:00 [INF] AuthenticationScheme: ApiKey was challenged.
+2021-02-01 16:56:21.113 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 16:56:22.012 +00:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Merchants] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2021-02-01 16:56:22.232 +00:00 [INF] Executed DbCommand (52ms) [Parameters=[@__apiKey_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[ApiKey], [m].[CompanyName], [m].[ContactName], [m].[EmailAddress], [m].[EncryptionKey]
+FROM [Merchants] AS [m]
+WHERE [m].[ApiKey] = @__apiKey_0
+2021-02-01 16:56:22.338 +00:00 [DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+2021-02-01 16:56:23.310 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Precision = 19) (Scale = 4) (DbType = Decimal), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Payments] ([Amount], [BankPaymentId], [CardExpiry], [CardFullName], [CardNumber], [Currency], [MerchantId], [Processed], [Status], [Submitted])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [Id]
+FROM [Payments]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-02-01 16:56:23.555 +00:00 [DBG] Sending PaymentGateway.Messages.Commands.SubmitPaymentCommand -> PaymentGateway.Messages.Commands.SubmitPaymentCommand, PaymentGateway.Messages@RebusTopics
+2021-02-01 16:56:23.609 +00:00 [DBG] Initializing new model
+2021-02-01 16:56:23.682 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Payments] SET [Status] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2021-02-01 16:56:23.825 +00:00 [INF] Entity Framework Core 5.0.2 initialized 'PaymentsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-01 16:56:23.832 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Merchants] AS [m]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2021-02-01 16:56:23.844 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__apiKey_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[ApiKey], [m].[CompanyName], [m].[ContactName], [m].[EmailAddress], [m].[EncryptionKey]
+FROM [Merchants] AS [m]
+WHERE [m].[ApiKey] = @__apiKey_0
+2021-02-01 16:56:23.850 +00:00 [DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+2021-02-01 16:56:23.880 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Amount], [p].[BankPaymentId], [p].[CardExpiry], [p].[CardFullName], [p].[CardNumber], [p].[Currency], [p].[MerchantId], [p].[Processed], [p].[Status], [p].[Submitted]
+FROM [Payments] AS [p]
+WHERE [p].[Id] = @__id_0
