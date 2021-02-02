@@ -20,11 +20,12 @@
     <ProjectReference Include="..\BankServices.Domain\BankServices.Domain.csproj" />
     <ProjectReference Include="..\BankServices.PaymentServices\BankServies.PaymentServices.csproj" />
     <ProjectReference Include="..\BankServices.SubmitPaymentsWorker\BankServices.SubmitPaymentsWorker.csproj" />
+    <ProjectReference Include="..\PaymentGateway.Api\PaymentGateway.Api.csproj" />
     <ProjectReference Include="..\PaymentGateway.Data\PaymentGateway.Data.csproj" />
+    <ProjectReference Include="..\PaymentGateway.Domain\PaymentGateway.Domain.csproj" />
     <ProjectReference Include="..\PaymentGateway.PersistPaymentsWorker\PaymentGateway.PersistPaymentsWorker.csproj" />
     <ProjectReference Include="..\PaymentGateway.Services\PaymentGateway.Services.csproj" />
     <ProjectReference Include="..\PaymentGatewayExercise.Api\PaymentGateway.Api.csproj" />
-    <ProjectReference Include="..\PaymentGatewayExercise.Domain\PaymentGateway.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
