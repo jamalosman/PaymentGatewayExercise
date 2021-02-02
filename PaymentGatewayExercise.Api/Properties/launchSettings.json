@@ -14,7 +14,7 @@
       "launchBrowser": true,
       "launchUrl": "",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Production",
+        "ASPNETCORE_ENVIRONMENT": "Development",
         "ConnectionStrings__PaymentsDatabase": "Server=.\\SQL_SERVER_2;Database=PaymentGateway;User Id=sa;Password=Password1;",
         "PaymentsMessageBroker__ConnectionString": "amqp://payment_gateway_api:G8Way2Paymnt2021@localhost:5672/payment_gateway",
         "PaymentsMessageBroker__PaymentsQueue": "PaymentsDefaultQueue"

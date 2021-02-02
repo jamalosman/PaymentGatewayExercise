@@ -49,7 +49,7 @@ namespace PaymentGateway.Services.Services
             var payment = await _repository.GetPayment(id);
             if (payment == null) throw new NotFoundException(nameof(Payment), id);
             // if the paynent belongs to another merchant, this merchant shouldn't know it exists
-            if (payment.MerchantId != GetCurrentUserId()) throw new NotFoundException(nameof(Payment), id);
+            if (payment.MerchantId != GetCurrentUserId() && GetCurrentUserRole() != "admin") throw new NotFoundException(nameof(Payment), id);
 
             var paymentRecord = _mapper.Map<PaymentRecordModel>(payment);
             return paymentRecord;
@@ -61,7 +61,7 @@ namespace PaymentGateway.Services.Services
             
             if (payment == null) throw new NotFoundException(nameof(Payment), bankPaymentId);
             // if the paynent belongs to another merchant, this merchant shouldn't know it exists
-            if (payment.MerchantId != GetCurrentUserId()) throw new NotFoundException(nameof(Payment), bankPaymentId);
+            if (payment.MerchantId != GetCurrentUserId() && GetCurrentUserRole() != "admin") throw new NotFoundException(nameof(Payment), bankPaymentId);
 
             var paymentRecord = _mapper.Map<PaymentRecordModel>(payment);
             
@@ -122,6 +122,12 @@ namespace PaymentGateway.Services.Services
             }
 
             return id;
+        }
+
+        private string GetCurrentUserRole()
+        {
+            return _currentUser.Claims
+                .FirstOrDefault(x => x.Type == ClaimTypes.Role).Value;
         }
     }
 }
